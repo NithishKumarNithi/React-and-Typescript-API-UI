@@ -1,0 +1,14 @@
+[
+    {
+        "id" : 1,
+        "name" : "vegetables"
+    },
+    {
+        "id" : 2,
+        "name" : "non-vegetables"
+    },
+    {
+        "id" : 3,
+        "name" : "fruits"
+    }
+]

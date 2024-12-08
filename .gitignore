@@ -1,0 +1,5 @@
+node_modules
+package-lock.json
+
+frontend/api-ui/node_modules
+frontend/api-ui/package-lock.json
