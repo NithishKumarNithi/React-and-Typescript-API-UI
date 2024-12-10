@@ -1,10 +1,6 @@
 import { useState, useEffect } from "react";
 import Items from "./Items";
-
-export interface List {
-    id : number,
-    name : string
-}
+import { List } from './interface';
 
 
 export default function Products() {
@@ -13,6 +9,7 @@ export default function Products() {
     const [product, setProduct] = useState('');
     const [items, setItems] = useState<List[]>([]);
     const [itemname, setItemname] = useState<string>('');
+    const [isEmpty, setIsEmpty] = useState<boolean>(false);
 
     useEffect(() => {
         let products = fetch("products" );
@@ -44,7 +41,10 @@ export default function Products() {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-
+        if(!itemname) {
+            setIsEmpty(true);
+            return;
+        };
         let itemLength = items.length
         setItems([
             ...items,
@@ -54,6 +54,7 @@ export default function Products() {
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         e.preventDefault();
+        setIsEmpty(false);
         setItemname(e.target.value);
     }
 
@@ -77,6 +78,8 @@ export default function Products() {
                 <label htmlFor="item">Item Name</label>
                 <br />
                 <input type="text" name="item" id="item" onChange={handleChange} value={itemname}/>
+                <br />
+                {isEmpty && <span className="field-error">* Field is required</span>}
             </div>
             <div>
                 <button id="add-item">Add</button>

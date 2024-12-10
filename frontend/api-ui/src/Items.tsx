@@ -1,4 +1,4 @@
-import { List } from './Products';
+import { List } from './interface';
 
 interface ItemProps{
     product: string,
