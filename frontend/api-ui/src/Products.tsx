@@ -50,6 +50,17 @@ export default function Products() {
             ...items,
             {id: ++itemLength , name: itemname }
         ])
+        let newProduct = fetch(`/${product}/add`,{
+            method: 'POST',
+            body: JSON.stringify({id: itemLength , name: itemname }),
+            headers: {
+                "Content-Type": "application/json",
+            },
+        });
+        newProduct
+        .then((result) => result.json())
+        .then((result) => console.log(result))
+        .catch((err) => console.log(err.message))
     }
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

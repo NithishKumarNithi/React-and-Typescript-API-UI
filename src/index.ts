@@ -4,6 +4,7 @@ import routes from '../routes';
 const app: Express = express();
 const PORT = '4001';
 
+app.use(express.json());
 app.use(routes);
 
 app.listen(PORT, () => {

@@ -1,26 +1,34 @@
 [
-    {
-        "id" : 1,
-        "name" : "apple"
-    },
-    {
-        "id" : 2,
-        "name" : "orange"
-    },
-    {
-        "id" : 3,
-        "name" : "papaya"
-    },
-    {
-        "id" : 4,
-        "name" : "mango"
-    },
-    {
-        "id" : 5,
-        "name" : "guava"
-    },
-    {
-        "id" : 6,
-        "name" : "grapes"
-    }
+  {
+    "id": 1,
+    "name": "apple"
+  },
+  {
+    "id": 2,
+    "name": "orange"
+  },
+  {
+    "id": 3,
+    "name": "papaya"
+  },
+  {
+    "id": 4,
+    "name": "mango"
+  },
+  {
+    "id": 5,
+    "name": "guava"
+  },
+  {
+    "id": 6,
+    "name": "grapes"
+  },
+  {
+    "id": 7,
+    "name": "fig"
+  },
+  {
+    "id": 8,
+    "name": "DragonFruit"
+  }
 ]

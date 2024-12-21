@@ -2,15 +2,30 @@
   "name": "node_typescript_api",
   "version": "1.0.0",
   "type": "module",
+  "nodemonConfig": {
+    "watch": [
+      "index",
+      "vegetables.json",
+      "fruits.json",
+      "non-vegetables.json",
+      "products.json"
+    ],
+    "ext": "ts",
+    "delay": "3",
+    "execMap": {
+      "ts": "tsx"
+    }
+  },
   "main": "src/index.ts",
   "scripts": {
-    "dev": "node --import=tsx src/index",
+    "dev": "nodemon src/index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "nodemon": "^3.1.9",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2"
   },
